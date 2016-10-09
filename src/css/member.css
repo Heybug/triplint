@@ -54,6 +54,9 @@ body {
 .t-nav {
   background: transparent;
 }
+.t-nav .left {
+  text-decoration: blink;
+}
 .member {
   overflow: hidden;
   height: 270px;
