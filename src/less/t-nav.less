@@ -1,0 +1,35 @@
+@import "variable";
+
+@navHeight: 50px;
+@navLeftRightWidth: 50px;
+.t-nav {
+    display: -webkit-box;
+    display: flex;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: @navHeight;
+    background: @fristColor;
+    z-index: 10;
+    .left, .right {
+        width: @navLeftRightWidth;
+        height: @navHeight;
+        text-align: center;
+        color: #fff;
+        font-size: 30px;
+        line-height: @navHeight;
+    }
+    .title {
+        display: block;
+        height: @navHeight;
+        text-align: center;
+        color: #fff;
+        font-size: 15px;
+        font-weight: bold;
+        line-height: @navHeight;
+        -webkit-box-flex: 1;
+        -webkit-flex: 1;
+        flex: 1;
+        -webkit-tap-highlight-color: transparent;
+    }
+}

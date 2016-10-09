@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+    <title>triplint</title>
+    <link rel="stylesheet" href="../../public/css/swiper-3.3.1.min.css">
+    <link rel="stylesheet" href="../../../dist/css/index.min.css">
+</head>
+<body>
+
+<div class="t-nav">
+    <div class="left on-menu"><i class="iconfont">&#xe601;</i></div>
+    <div class="title">Triplint</div>
+    <div class="right"><i class="iconfont">&#xe600;</i></div>
+</div>
+
+<div class="swiper-container barn">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide">
+            <img src="../../src/images/img.jpg" alt="">
+        </div>
+        <div class="swiper-slide">
+            <img src="../../src/images/1.jpg" alt="">
+        </div>
+        <div class="swiper-slide">
+            <img src="../../src/images/img.jpg" alt="">
+        </div>
+    </div>
+    <div class="swiper-pagination"></div>
+</div>
+
+<div class="list">
+    <div class="info" v-for="list in lists">
+        <p class="title">{{ list.title }}</p>
+        <div class="time-didian">
+            <p>{{ list.dateTime}} {{ list.day }}天 {{ list.browse }} 次浏览</p>
+            <i>{{ list.place }}</i>
+        </div>
+        <div class="user">
+            <img src="{{ list.portrait }}" alt="{{ list.by }}">
+            <p>by {{ list.by }}</p>
+        </div>
+        <img src="{{ list.img }}" alt="{{ list.title }}">
+    </div>
+</div>
+
+<div class="add">+</div>
+
+<div class="leftMenu">
+    <div class="t-mask-visible"></div>
+    <div class="menu">
+        <div class="portrarit">
+            <img src="../../favicon.ico" alt="">
+            <p class="name">Triplint</p>
+        </div>
+        <div class="menu-list">
+            <a href="/src/view" class="on">热门游记</a>
+            <a href="javascript:;">草稿箱</a>
+            <a href="setting.html">设置</a>
+        </div>
+        <div class="cp">
+            Triplint
+        </div>
+    </div>
+</div>
+<script src="../../public/js/jquery-2.1.4.js"></script>
+<script src="../../public/js/swiper-3.3.1.jquery.min.js"></script>
+<script src="../../public/js/vue.js"></script>
+<script src="../js/index.js"></script>
+</body>
+</html>
