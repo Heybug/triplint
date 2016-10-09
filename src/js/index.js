@@ -75,7 +75,6 @@ jQuery(function ($) {
         autoplayDisableOnInteraction: false// 点击后继续滑动
     });
 
-
     $(".on-menu").click(function () {
         $leftMenu.css("left", "0");
         $leftMenu.addClass("on");

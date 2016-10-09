@@ -32,16 +32,16 @@
 
 <div class="list">
     <div class="info" v-for="list in lists">
-        <p class="title">{{ list.title }}</p>
+        <p v-cloak class="title">{{ list.title }}</p>
         <div class="time-didian">
-            <p>{{ list.dateTime}} {{ list.day }}天 {{ list.browse }} 次浏览</p>
-            <i>{{ list.place }}</i>
+            <p v-cloak>{{ list.dateTime}} {{ list.day }}天 {{ list.browse }} 次浏览</p>
+            <i v-cloak>{{ list.place }}</i>
         </div>
         <div class="user">
-            <img src="{{ list.portrait }}" alt="{{ list.by }}">
-            <p>by {{ list.by }}</p>
+            <img v-cloak src="{{ list.portrait }}" alt="{{ list.by }}">
+            <p v-cloak>by {{ list.by }}</p>
         </div>
-        <img src="{{ list.img }}" alt="{{ list.title }}">
+        <img v-cloak src="{{ list.img }}" alt="{{ list.title }}">
     </div>
 </div>
 
