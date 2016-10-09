@@ -1,0 +1,79 @@
+@import "variable";
+@import "icon";
+@import "t-nav";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    width: 100%;
+    background: #faf8ec;
+}
+
+.t-nav {
+    background: transparent;
+}
+
+.member {
+    overflow: hidden;
+    height: 300px;
+    text-align: center;
+    .box {
+        width: 100%;
+        position: absolute;
+        top: 10%;
+        .info {
+            display: -webkit-box;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            .number {
+                font-size: 20px;
+                margin-bottom: 4px;
+            }
+            .desc {
+                font-size: 12px;
+            }
+            .user {
+                margin: 0 30px;
+                img {
+                    width: 56px;
+                    border-radius: 50%;
+                    border: 2px solid #fff;
+                    background: #fff;
+                }
+            }
+        }
+        .name {
+            color: #fff;
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 15px;
+        }
+        .msg {
+            width: 110px;
+            padding: 10px 0;
+            text-align: center;
+            border-radius: 27px;
+            margin: 25px auto 0 auto;
+            background: #fff;
+        }
+    }
+    .member-bg {
+        display: block;
+        width: 100%;
+        margin-top: -70px;
+    }
+}
+
+.items {
+    .null {
+        margin-top: 50px;
+        color: #ded3b3;
+        text-align: center;
+        font-size: 13px;
+    }
+}

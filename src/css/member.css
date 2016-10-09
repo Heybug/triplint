@@ -1,0 +1,114 @@
+@font-face {
+  font-family: 'iconfont';
+  src: url('//at.alicdn.com/t/font_1475986101_7080214.eot');
+  /* IE9*/
+  src: url('//at.alicdn.com/t/font_1475986101_7080214.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('//at.alicdn.com/t/font_1475986101_7080214.woff') format('woff'), /* chrome、firefox */ url('//at.alicdn.com/t/font_1475986101_7080214.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/ url('//at.alicdn.com/t/font_1475986101_7080214.svg#iconfont') format('svg');
+  /* iOS 4.1- */
+}
+.iconfont {
+  font-family: "iconfont";
+  font-size: 26px;
+  font-style: normal;
+}
+.t-nav {
+  display: -webkit-box;
+  display: flex;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 50px;
+  background: #49bdca;
+  z-index: 10;
+}
+.t-nav .left,
+.t-nav .right {
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  color: #fff;
+  font-size: 30px;
+  line-height: 50px;
+}
+.t-nav .title {
+  display: block;
+  height: 50px;
+  text-align: center;
+  color: #fff;
+  font-size: 15px;
+  font-weight: bold;
+  line-height: 50px;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+  -webkit-tap-highlight-color: transparent;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  width: 100%;
+  background: #faf8ec;
+}
+.t-nav {
+  background: transparent;
+}
+.member {
+  overflow: hidden;
+  height: 300px;
+  text-align: center;
+}
+.member .box {
+  width: 100%;
+  position: absolute;
+  top: 10%;
+}
+.member .box .info {
+  display: -webkit-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+.member .box .info .number {
+  font-size: 20px;
+  margin-bottom: 4px;
+}
+.member .box .info .desc {
+  font-size: 12px;
+}
+.member .box .info .user {
+  margin: 0 30px;
+}
+.member .box .info .user img {
+  width: 56px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  background: #fff;
+}
+.member .box .name {
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 15px;
+}
+.member .box .msg {
+  width: 110px;
+  padding: 10px 0;
+  text-align: center;
+  border-radius: 27px;
+  margin: 25px auto 0 auto;
+  background: #fff;
+}
+.member .member-bg {
+  display: block;
+  width: 100%;
+  margin-top: -70px;
+}
+.items .null {
+  margin-top: 50px;
+  color: #ded3b3;
+  text-align: center;
+  font-size: 13px;
+}
