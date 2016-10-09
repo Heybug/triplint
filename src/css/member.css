@@ -56,8 +56,16 @@ body {
 }
 .member {
   overflow: hidden;
-  height: 300px;
+  height: 270px;
   text-align: center;
+  background-image: url("../../public/images/member.jpg");
+  background-size: cover;
+  /*
+    .member-bg {
+        display: block;
+        width: 100%;
+        margin-top: -70px;
+    }*/
 }
 .member .box {
   width: 100%;
@@ -100,11 +108,6 @@ body {
   border-radius: 27px;
   margin: 25px auto 0 auto;
   background: #fff;
-}
-.member .member-bg {
-  display: block;
-  width: 100%;
-  margin-top: -70px;
 }
 .items .null {
   margin-top: 50px;
