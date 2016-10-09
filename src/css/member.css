@@ -61,11 +61,11 @@ body {
   background-image: url("../../public/images/member.jpg");
   background-size: cover;
   /*
-    .member-bg {
-        display: block;
-        width: 100%;
-        margin-top: -70px;
-    }*/
+        .member-bg {
+            display: block;
+            width: 100%;
+            margin-top: -70px;
+        }*/
 }
 .member .box {
   width: 100%;
@@ -73,6 +73,7 @@ body {
   top: 10%;
 }
 .member .box .info {
+  position: relative;
   display: -webkit-box;
   display: flex;
   justify-content: center;
@@ -94,6 +95,15 @@ body {
   border-radius: 50%;
   border: 2px solid #fff;
   background: #fff;
+}
+.member .box .info .level {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  margin-top: -9px;
+  padding: 4px 10px;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 13px 0 0 13px;
 }
 .member .box .name {
   color: #fff;
