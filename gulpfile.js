@@ -6,8 +6,11 @@ var gulp = require('gulp'),
     concat = require('gulp-concat'),
     watch = require('gulp-watch'),
     rename = require('gulp-rename');
+    gulpCopy = require('gulp-file-copy');
 
 
+gulp.task('dist', ['less', 'minify-css', 'copy'], function(){
+});
 // 编译less
 gulp.task('less', function () {
     return gulp.src(['src/less/*.less', '!src/less/variable.less'])
@@ -16,6 +19,12 @@ gulp.task('less', function () {
         }))
         // .pipe(gulp.dest('dist/css'))
         .pipe(gulp.dest('src/css'));
+});
+
+gulp.task('copy', function () {
+    var start = './src/**';
+    return gulp.src(start)
+        .pipe(gulp.dest('dist'));
 });
 
 // 压缩css
