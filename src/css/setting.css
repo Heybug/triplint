@@ -1,3 +1,12 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  width: 100%;
+  background: #faf8ec;
+}
 @font-face {
   font-family: 'iconfont';
   src: url('//at.alicdn.com/t/font_1476029239_3525143.eot');
@@ -16,27 +25,27 @@
   position: fixed;
   top: 0;
   width: 100%;
-  height: 50px;
+  height: 45px;
   background: #49bdca;
   z-index: 10;
 }
 .t-nav .left,
 .t-nav .right {
   width: 50px;
-  height: 50px;
+  height: 45px;
   text-align: center;
   color: #fff;
   font-size: 30px;
-  line-height: 50px;
+  line-height: 45px;
 }
 .t-nav .title {
   display: block;
-  height: 50px;
+  height: 45px;
   text-align: center;
   color: #fff;
   font-size: 15px;
   font-weight: bold;
-  line-height: 50px;
+  line-height: 45px;
   -webkit-box-flex: 1;
   -webkit-flex: 1;
   flex: 1;
@@ -124,15 +133,6 @@ a {
   text-align: center;
   color: #fff;
 }
-* {
-  margin: 0;
-  padding: 0;
-}
-html,
-body {
-  width: 100%;
-  background: #faf8ec;
-}
 .t-nav .title {
   text-indent: 10px;
   text-align: left;
@@ -141,7 +141,7 @@ body {
   font-size: 15px;
 }
 .main {
-  margin: 50px 0;
+  margin: 45px 0 50px;
 }
 .main .weui-panel {
   background-color: #faf8ec;
