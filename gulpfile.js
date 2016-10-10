@@ -1,5 +1,5 @@
 var gulp = require('gulp'),
-    jshint = require('gulp-jshint'),
+    // jshint = require('gulp-jshint'),
     cleanCSS = require('gulp-clean-css'),
     less = require('gulp-less'),
     path = require('path'),
@@ -43,11 +43,11 @@ gulp.task('concat', ['minify-css'], function () {
 });
 
 // 检查js
-gulp.task('lint', function () {
-    gulp.src('src/js/js.js')
-        .pipe(jshint())
-        .pipe(jshint.reporter('default'));
-});
+/*gulp.task('lint', function () {
+ gulp.src('src/js/js.js')
+ .pipe(jshint())
+ .pipe(jshint.reporter('default'));
+ });*/
 
 // 监视
 gulp.task('watch', ['less', 'minify-css'], function () {
@@ -55,6 +55,6 @@ gulp.task('watch', ['less', 'minify-css'], function () {
 });
 
 // 默认task
-gulp.task('default', function () {
+gulp.task('default', ['watch'], function () {
     // 将你的默认的任务代码放在这
 });
