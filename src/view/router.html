@@ -4,144 +4,58 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
     <title>Title</title>
-    <link rel="stylesheet" href="https://res.wx.qq.com/open/libs/weui/1.0.1/weui.min.css">
-    <link rel="stylesheet" href="../../../dist/css/setting.min.css">
+    <script src="../../public/js/vue.min.js"></script>
+    <!--<script src="https://unpkg.com/vue@2.0.0-rc.8/dist/vue.js"></script>-->
+    <!--<script src="../../public/js/vue-router.js"></script>-->
+    <script src="https://unpkg.com/vue-router@2.0.0-rc.7"></script>
 </head>
 <body>
-<div class="t-nav">
-    <div class="left on-menu"><i class="iconfont">&#xe601;</i></div>
-    <div class="title">设置</div>
-    <div class="right">退出</div>
+<div id="app">
+    <h1>Hello App!</h1>
+    <p>
+        <!-- 使用 router-link 组件来导航. -->
+        <!-- 通过传入 `to` 属性指定链接. -->
+        <!-- <router-link> 默认会被渲染成一个 `<a>` 标签 -->
+        <router-link to="/foo">Go to Foo</router-link>
+        <router-link to="/bar">Go to Bar</router-link>
+    </p>
+    <!-- 路由出口 -->
+    <!-- 路由匹配到的组件将渲染在这里 -->
+    <router-view></router-view>
 </div>
 
-<div class="main" id="setting">
-    <div class="weui-panel">
-        <div class="weui-panel__hd">个人设置</div>
-        <div class="weui-panel__bd">
-            <div class="weui-media-box weui-media-box_small-appmsg">
-                <div class="weui-cells">
-                    <a class="weui-cell weui-cell_access" href="javascript:;">
-                        <div class="weui-cell__bd weui-cell_primary">
-                            <p>账户设置</p>
-                        </div>
-                    </a>
-                    <a class="weui-cell weui-cell_access" href="javascript:;">
-                        <div class="weui-cell__bd weui-cell_primary">
-                            <p>设置新密码</p>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="weui-panel__hd interval">系统设置</div>
-        <div class="weui-panel__bd">
-            <div class="weui-media-box weui-media-box_small-appmsg">
-                <div class="weui-cells">
-                    <a class="weui-cell weui-cell_access" href="javascript:;">
-                        <div class="weui-cell__bd weui-cell_primary">
-                            <p>推送通知设置</p>
-                        </div>
-                    </a>
-                    <a class="weui-cell weui-cell_access" href="javascript:;">
-                        <div class="weui-cell__bd weui-cell_primary">
-                            <p>连接社交网络</p>
-                        </div>
-                    </a>
-                    <a class="weui-cell weui-cell_access" href="javascript:;">
-                        <div class="weui-cell__bd weui-cell_primary">
-                            <p>清空缓存</p>
-                        </div>
-                    </a>
-                    <a class="weui-cell weui-cell_access" href="javascript:;">
-                        <div class="weui-cell__bd weui-cell_primary">
-                            <p>关于我们</p>
-                        </div>
-                    </a>
-                    <a class="weui-cell weui-cell_access" href="javascript:;">
-                        <div class="weui-cell__bd weui-cell_primary">
-                            <p>去评分</p>
-                        </div>
-                    </a>
-                    <a class="weui-cell weui-cell_access" href="javascript:;">
-                        <div class="weui-cell__bd weui-cell_primary">
-                            <p>意见反馈</p>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div id="app">
-        <h1>Hello App!</h1>
-        <p>
-            <!-- 使用 router-link 组件来导航. -->
-            <!-- 通过传入 `to` 属性指定链接. -->
-            <!-- <router-link> 默认会被渲染成一个 `<a>` 标签 -->
-            <router-link to="/foo">Go to Foo</router-link>
-            <router-link to="/bar">Go to Bar</router-link>
-        </p>
-        <!-- 路由出口 -->
-        <!-- 路由匹配到的组件将渲染在这里 -->
-        <router-view></router-view>
-    </div>
-</div>
-
-<div class="leftMenu">
-    <div class="t-mask-visible"></div>
-    <div class="menu">
-        <a href="menber.html" class="portrarit">
-            <img src="../../favicon.ico" alt="">
-            <p class="name">Triplint</p>
-        </a>
-        <div class="menu-list">
-            <a href="/src/view">热门游记</a>
-            <a href="javascript:;">草稿箱</a>
-            <a href="setting.html" class="on">设置</a>
-        </div>
-        <div class="cp">
-            Triplint
-        </div>
-    </div>
-</div>
-
-<script src="../../public/js/jquery-2.1.4.js"></script>
-<script src="../../public/js/vue.js"></script>
-<script src="../../public/js/vue-router.min.js"></script>
 <script>
-    jQuery(function ($) {
-        // 0. 如果使用模块化机制编程， 要调用 Vue.use(VueRouter)
+    // 0. 如果使用模块化机制编程， 要调用 Vue.use(VueRouter)
 
-        // 1. 定义（路由）组件。
-        // 可以从其他文件 import 进来
-        const Foo = {template: '<div>foo</div>'};
-        const Bar = {template: '<div>bar</div>'};
+    // 1. 定义（路由）组件。
+    // 可以从其他文件 import 进来
+    const Foo = {template: '<div>foo</div>'}
+    const Bar = {template: '<div>bar</div>'}
 
-        // 2. 定义路由
-        // 每个路由应该映射一个组件。 其中"component" 可以是
-        // 通过 Vue.extend() 创建的组件构造器，
-        // 或者，只是一个组件配置对象。
-        // 我们晚点在讨论嵌套路由。
-        const routes = [
-            {path: '/foo', component: Foo},
-            {path: '/bar', component: Bar}
-        ];
+    // 2. 定义路由
+    // 每个路由应该映射一个组件。 其中"component" 可以是
+    // 通过 Vue.extend() 创建的组件构造器，
+    // 或者，只是一个组件配置对象。
+    // 我们晚点在讨论嵌套路由。
+    const routes = [
+        {path: '/foo', component: Foo},
+        {path: '/bar', component: Bar}
+    ]
 
-        // 3. 创建 router 实例，然后传 `routes` 配置
-        // 你还可以传别的配置参数, 不过先这么简单着吧。
-        const router = new VueRouter({
-            routes // （缩写）相当于 routes: routes
-        });
+    // 3. 创建 router 实例，然后传 `routes` 配置
+    // 你还可以传别的配置参数, 不过先这么简单着吧。
+    const router = new VueRouter({
+        routes // （缩写）相当于 routes: routes
+    })
 
-        // 4. 创建和挂载根实例。
-        // 记得要通过 router 配置参数注入路由，
-        // 从而让整个应用都有路由功能
-        const app = new Vue({
-            router
-        }).$mount('#app');
+    // 4. 创建和挂载根实例。
+    // 记得要通过 router 配置参数注入路由，
+    // 从而让整个应用都有路由功能
+    const app = new Vue({
+        router
+    }).$mount('#app')
 
-        // 现在，应用已经启动了！
-    });
+    // 现在，应用已经启动了！
 </script>
 </body>
 </html>
