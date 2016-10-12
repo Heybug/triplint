@@ -6,10 +6,9 @@ var gulp = require('gulp'),
     concat = require('gulp-concat'),
     watch = require('gulp-watch'),
     rename = require('gulp-rename');
-    gulpCopy = require('gulp-file-copy');
 
 
-gulp.task('dist', ['less', 'minify-css', 'copy'], function(){
+gulp.task('dist', ['less', 'minify-css', 'copy', 'copy-public'], function () {
 });
 // 编译less
 gulp.task('less', function () {
@@ -26,7 +25,12 @@ gulp.task('copy', function () {
     return gulp.src(start)
         .pipe(gulp.dest('dist'));
 });
-
+// copy public
+gulp.task('copy-public', function () {
+    var start = './public/**';
+    return gulp.src(start)
+        .pipe(gulp.dest('dist/public'));
+});
 // 压缩css
 gulp.task('minify-css', ['less'], function () {
     return gulp.src(['!src/css/variable.css', 'src/css/*.css'])
@@ -50,8 +54,8 @@ gulp.task('concat', ['minify-css'], function () {
  });*/
 
 // 监视
-gulp.task('watch', ['less', 'minify-css'], function () {
-    gulp.watch('src/less/*.less', ['less', 'minify-css']);
+gulp.task('watch', ['dist'], function () {
+    gulp.watch('src/**/*.*', ['dist']);
 });
 
 // 默认task

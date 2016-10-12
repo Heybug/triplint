@@ -2,17 +2,17 @@
  * Created by Qiu on 16-10-9.
  */
 jQuery(function ($) {
-    var $html = $("html");
+    var $leftMenu = $(".leftMenu");
 
     $(".on-menu").click(function () {
-        $(".t-menu-mask-visible").css("visibility", "visible");
-        $html.addClass("on-menu");
+        $leftMenu.css("left", "0");
+        $leftMenu.addClass("on");
     });
 
-    $(".leftMenu,.t-menu-mask-visible").click(function () {
-        $html.removeClass("on-menu");
+    $(".leftMenu .t-mask-visible").click(function () {
+        $leftMenu.removeClass("on");
         setTimeout(function () {
-            $(".t-menu-mask-visible").css("visibility", "hidden");
-        }, 350);
+            $leftMenu.css("left", "-100%");
+        }, 300);
     });
 });
